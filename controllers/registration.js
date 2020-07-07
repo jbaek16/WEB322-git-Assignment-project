@@ -62,7 +62,7 @@ router.post('/submit', (req, res) => {
     else {
 
         const sgMail = require('@sendgrid/mail');
-        sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+        sgMail.setApiKey("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");
         const msg = {
             to: `shinru879@gmail.com`,
             from: `${email}`,
