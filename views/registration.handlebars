@@ -1,0 +1,71 @@
+<div id="form">
+    <div id="regit_form">
+        <form method="POST" id="form" name='userinfos' action="/registration/submit">
+            <fieldset><br>
+                <legend><b>CREATE ACCOUNT</b></legend>
+                <div id="social-networks">
+                    <a href="https://www.facebook.com/" class="social_logo"><img src="../img/facebook.PNG"
+                            alt="facebook"></a>
+                    <a href="https://www.google.com/" class="social_logo"><img src="../img/google.PNG"
+                            alt="google.PNG"></a>
+                    <a href="https://twitter.com/" class="social_logo"><img src="../img/twiter.PNG"
+                            alt="twiter.PNG"></a>
+                    <a href="https://www.linkedin.com/" class="social_logo"><img src="../img/linkedIn.PNG"
+                            alt="linkedIn.PNG"></a>
+                </div>
+                <hr>
+                <span class="input"><label for="fname">First Name: </label><br>
+                    <input type="text" id="firstName" name="firstName" title="First Name"
+                        placeholder="Please enter your first name">
+                    <span style=" color: red;">
+                        {{#each errorMessages1}}
+                        <div class="errMessage">{{this}}</div>
+                        {{/each}}
+                    </span>
+                </span><br>
+
+                <span class="input"><label for="lname">Last Name: </label><br>
+                    <input type="text" id="lastName" name="lastName" title="Last Name"
+                        placeholder="Please enter your last name">
+                    <span style=" color: red;">
+                        {{#each errorMessages2}}
+                        <div class="errMessage">{{this}}</div>
+                        {{/each}}
+                    </span>
+                </span><br>
+
+                <span class="input"><label for="email">Email: </label><br>
+                    <input type="email" id="email" name="email" title="Email address"
+                        placeholder="Please enter your email address">
+                    <span style=" color: red;">
+                        {{#each errorMessages5}}
+                        <div class="errMessage">{{this}}</div>
+                        {{/each}}
+
+                        {{#each errorMessages6}}
+                        <div class="errMessage">{{this}}</div>
+                        {{/each}}
+                    </span>
+                </span>
+                <br>
+
+                <span class="input"><label for="password">Password:</label><br>
+                    <input type="password" id="password" name="password" title="Password"
+                        placeholder="Please enter your password">
+                    <span style=" color: red;">
+                        {{#each errorMessages3}}
+                        <div class="errMessage">{{this}}</div>
+                        {{/each}}
+
+                        {{#each errorMessages4}}
+                        <div class="errMessage">{{this}}</div>
+                        {{/each}}
+                    </span>
+                </span><br>
+
+                <br><br>
+                <input type="submit" name="submit" value="Submit" />
+                <br><br>
+        </form>
+    </div>
+</div>

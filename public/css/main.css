@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+html{
+    font-family: 'Lato', sans-serif;
+}
+
+/*Navigation*/
+header{
+    
+    background-color: lightslategray;
+    z-index: 999;
+}
+
+#logo img{
+    height: 5vh;
+}
+
+#name{
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    color: black;
+    padding-left: 1vw;
+    font-size: 2vw;
+    font-weight: 800;
+}
+
+#nav-list{
+    color: black;
+    float: right;
+    top: 0;
+    height: 4vh;
+    font-weight: bold;
+
+}
+
+#nav-list ul{
+    margin: 1.5vh 0px;
+    padding: 0px;
+
+    list-style-type: none;
+    overflow: hidden;    
+}
+
+#nav-list li{   
+    float: left;
+    margin: 0.1vh 2vh 10px 0px;
+}
+
+/*SNS-LINKS*/
+
+#navlist a, #navlist a:link, #navlist a:hover, #navlist a:visited{
+    color:black;
+    font-size: 1vw;
+    font-weight: 600;
+    text-decoration: none;    
+
+    border-bottom: 0.3vh solid black;
+   
+}
+
+#navlist a{
+    padding-bottom: 0.2vh;
+}
+
+#navlist a:hover{
+    animation: anim 0.3s forwards;
+}
+
+
+@keyframes anim{
+    100%{
+        padding-bottom: 0.7vh;
+        border-color: green;
+    }
+}
+
+/*FOOTER*/
+
+footer{
+    margin-top: 30px;
+    padding-top: 25px;
+    border: 5px grey;
+    border-top-left-radius: 15%;
+    border-top-right-radius: 15%;
+
+    background-color: lightslategray;
+
+    color: white;
+    padding-bottom:40px;
+    right: 0px;
+}
+
+#foot{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.link-social div{
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-weight: 1200;
+    padding-left: 10px;
+}
+
+
+#social img{
+    padding: 5px 0px;
+    width:30px;
+}

@@ -1,0 +1,45 @@
+<div id="form">
+    <form method="POST" id="form" name='userinfos' action="/login/submit">
+        <fieldset>
+            <legend><b>LOG IN ACCOUNT</b></legend>
+            <br>
+            <div id="social-networks">
+                <a href="https://www.facebook.com/" class="social_logo"><img src="../img/facebook.PNG"
+                        alt="facebook"></a>
+                <a href="https://www.google.com/" class="social_logo"><img src="../img/google.PNG" alt="google.PNG"></a>
+                <a href="https://twitter.com/" class="social_logo"><img src="../img/twiter.PNG" alt="twiter.PNG"></a>
+                <a href="https://www.linkedin.com/" class="social_logo"><img src="../img/linkedIn.PNG"
+                        alt="linkedIn.PNG"></a>
+            </div>
+            <hr>
+            <span class="input"><label for="email">Email: </label><br>
+                <input type="email" id="email" name="email" title="Email address"
+                    placeholder="Please enter your email address">
+                <span style=" color: red;">
+                    {{#each errorMessages3}}
+                    <div class="errMessage">{{this}}</div>
+                    {{/each}}
+
+                    {{#each errorMessages4}}
+                    <div class="errMessage">{{this}}</div>
+                    {{/each}}
+                </span>
+            </span><br>
+            <span class="input"><label for="fname">Password: </label><br>
+                <input type="password" id="password" name="password" title="Password"
+                    placeholder="Please enter your password">
+                <span style=" color: red;">
+                    {{#each errorMessages3}}
+                    <div class="errMessage">{{this}}</div>
+                    {{/each}}
+
+                    {{#each errorMessages4}}
+                    <div class="errMessage">{{this}}</div>
+                    {{/each}}
+                </span>
+            </span>
+            <br><br>
+            <input type="submit" name="submit" value="Login" />
+            <br><br>
+    </form>
+</div>
