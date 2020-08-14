@@ -1,6 +1,6 @@
 <div id="form">
     <div id="regit_form">
-        <form method="POST" id="form" name='userinfos' action="/registration/submit">
+        <form method="POST" id="form" name='userinfos' action="/regit">
             <fieldset><br>
                 <legend><b>CREATE ACCOUNT</b></legend>
                 <div id="social-networks">
@@ -16,55 +16,46 @@
                 <hr>
                 <span class="input"><label for="fname">First Name: </label><br>
                     <input type="text" id="firstName" name="firstName" title="First Name"
-                        placeholder="Please enter your first name">
+                        placeholder="Please enter your first name" value="{{dataForm.firstName}}">
                     <span style=" color: red;">
-                        {{#each errorMessages1}}
-                        <div class="errMessage">{{this}}</div>
-                        {{/each}}
+                       
+                        <div class="errMessage">{{fnError}}</div>
+                    
                     </span>
                 </span><br>
 
                 <span class="input"><label for="lname">Last Name: </label><br>
                     <input type="text" id="lastName" name="lastName" title="Last Name"
-                        placeholder="Please enter your last name">
+                        placeholder="Please enter your last name" value="{{dataForm.lastName}}">
                     <span style=" color: red;">
-                        {{#each errorMessages2}}
-                        <div class="errMessage">{{this}}</div>
-                        {{/each}}
+                        
+                        <div class="errMessage">{{lnError}}</div>
+                        
                     </span>
                 </span><br>
 
                 <span class="input"><label for="email">Email: </label><br>
                     <input type="email" id="email" name="email" title="Email address"
-                        placeholder="Please enter your email address">
+                        placeholder="Please enter your email address" value="{{dataForm.email}}">
                     <span style=" color: red;">
-                        {{#each errorMessages5}}
-                        <div class="errMessage">{{this}}</div>
-                        {{/each}}
-
-                        {{#each errorMessages6}}
-                        <div class="errMessage">{{this}}</div>
-                        {{/each}}
+                       
+                        <div class="errMessage">{{emailError}}</div>
                     </span>
                 </span>
                 <br>
 
                 <span class="input"><label for="password">Password:</label><br>
                     <input type="password" id="password" name="password" title="Password"
-                        placeholder="Please enter your password">
+                        placeholder="Please enter your password" value="{{dataForm.password}}">
                     <span style=" color: red;">
-                        {{#each errorMessages3}}
-                        <div class="errMessage">{{this}}</div>
-                        {{/each}}
-
-                        {{#each errorMessages4}}
-                        <div class="errMessage">{{this}}</div>
-                        {{/each}}
+                     
+                        <div class="errMessage">{{pwError}}</div>
+                       
                     </span>
                 </span><br>
 
                 <br><br>
-                <input type="submit" name="submit" value="Submit" />
+                <button type="submit" name="submit" value="Submit">Register</button>
                 <br><br>
         </form>
     </div>

@@ -1,0 +1,29 @@
+<form action="/addMeals" method="POST">
+        <br><h2 style="margin-left: 42%">Form to add a new package</h2><hr>
+
+        {{#if ifMealAdded}}
+            <h2 style="margin-left: 37%">You successfully added a new package to the Database!</h2>
+        {{/if}}
+
+        {{#if errors}}
+            <h5 style="color: red; margin-left: 42%">==Error== You should fill out all info</h5>
+        {{/if}}
+        <input type="text" placeholder="Title" name="title" value="{{dataForm.title}}">
+        <input type="text" placeholder="Category" name="category" value="{{dataForm.category}}">
+        <input type="text" placeholder="Description" name="description" value="{{dataForm.desc}}">
+        <input type="text" placeholder="Price" name="price" value="{{dataForm.price}}">
+        <input type="text" placeholder="Number of Meals" name="numberOfMeals" value="{{dataForm.nOfMeals}}">
+        <input type="file" name="picture">
+        <input type="checkbox" name="topMeal" value="true">
+        <label for="topMeal" style="margin-left: 48%;">Top Meal</label>
+        <br>
+        <br>
+        <br>
+        {{#each errorMessages}}
+        <div class="vError"><i class="fas fa-exclamation-circle"></i>&nbsp;{{this}}&nbsp;</div>
+        {{/each}}
+        <button type="submit" class="button_register" name="blt" style="margin-left: 46%;">Success Add Meal</button>
+        <br>
+        <br>
+        <button onclick="location.href='/Dashboard/DataClerk'" type="button" class="button_register" name="blt" style="margin-left: 47%;">Back</button>
+        </form>

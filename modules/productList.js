@@ -1,4 +1,4 @@
-const mainList = 
+const menu = 
 {
 
     fakedb : [],
@@ -92,7 +92,7 @@ const mainList =
     }
 }
 
-mainList.initDB();
+menu.initDB();
 
 //export default product;
-module.exports = mainList;
+module.exports = menu;

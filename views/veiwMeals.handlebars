@@ -1,0 +1,19 @@
+div class="content">
+    <p style="font-size: 20px; margin-top: 800px; margin-left: 150px">List of Meals</p> 
+  {{#if added}}
+    <div class="service_container">
+         {{#each data}}
+            <img src="/img/{{this.img}}"><br>
+            <h2>{{this.title}}</h2><br>
+            <h3>{{this.category}}</h3><br>
+            <h3>{{this.desc}}</h3><br>
+            <h3>{{this.nOfMeals}}</h3><br>
+            <h3 style="font-weight: bold; color:crimson; text-decoration: underline">{{this.price}}</h3><br><br>
+        </div>   
+    {{/each}}
+    </div>
+    {{else}}
+        <h4> Add meals is cancelled!</h4>
+    {{/if}}
+    <button onclick="location.href='/DataClerk'" type="button" class="addbtn">Back</button>
+ </div> 

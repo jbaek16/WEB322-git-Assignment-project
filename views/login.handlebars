@@ -1,5 +1,5 @@
 <div id="form">
-    <form method="POST" id="form" name='userinfos' action="/login/submit">
+    <form method="POST" id="form" name='userinfos' action="/login">
         <fieldset>
             <legend><b>LOG IN ACCOUNT</b></legend>
             <br>
@@ -16,30 +16,23 @@
                 <input type="email" id="email" name="email" title="Email address"
                     placeholder="Please enter your email address">
                 <span style=" color: red;">
-                    {{#each errorMessages3}}
-                    <div class="errMessage">{{this}}</div>
-                    {{/each}}
+                   
+                    <div class="errMessage">{{emailError}}</div>
 
-                    {{#each errorMessages4}}
-                    <div class="errMessage">{{this}}</div>
-                    {{/each}}
+                 
                 </span>
             </span><br>
             <span class="input"><label for="fname">Password: </label><br>
                 <input type="password" id="password" name="password" title="Password"
                     placeholder="Please enter your password">
                 <span style=" color: red;">
-                    {{#each errorMessages3}}
-                    <div class="errMessage">{{this}}</div>
-                    {{/each}}
 
-                    {{#each errorMessages4}}
-                    <div class="errMessage">{{this}}</div>
-                    {{/each}}
+                    <div class="errMessage">{{passwordError}}</div>
+
                 </span>
             </span>
             <br><br>
-            <input type="submit" name="submit" value="Login" />
+            <button type="submit" name="submit" value="Login">Login</button>
             <br><br>
     </form>
 </div>
